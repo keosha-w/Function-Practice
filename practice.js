@@ -78,13 +78,13 @@ const words = [
     (Google 'javascript startswith' to get started)
  */
 const filter = (array) => {
-    const removedWords = []
+    const wordsToKeep = []
     for (const word of array) {
-        if (word.startsWith("k") === true) {
-            removedWords.push(word)
+        if (word.startsWith("k") === false) {
+            wordsToKeep.push(word)
         }
     }
-    return removedWords
+    return wordsToKeep
 }
 /*
     Function to build a single string from the array
@@ -104,8 +104,8 @@ const joinWords = (array) => {
     Invoke the string building function, and pass the
     return value of the previous function as an argument
 */
-joinWords(printedNewArray)
+const sentence = joinWords(printedNewArray)
 
 
 
-console.log(joinWords)
+console.log(sentence)
