@@ -77,35 +77,71 @@ const words = [
     Function to filter out `k` words
     (Google 'javascript startswith' to get started)
  */
-const filter = (array) => {
-    const removedWords = []
-    for (const word of array) {
-        if (word.startsWith("k") === true) {
-            removedWords.push(word)
+    const filter = (array) => {
+        const wordsToKeep = []
+        for (const word of array) {
+            if (word.startsWith("k") === false) {
+                wordsToKeep.push(word)
+            }
         }
+        return wordsToKeep
     }
-    return removedWords
+    /*
+        Function to build a single string from the array
+        (Google 'javascript combine all items in array' to get started)
+     */
+    const joinWords = (array) => {
+        const sentenceArray = array.join(" ")
+        return sentenceArray
+    }
+    
+    /*
+        Invoke the filtering function and store its return value
+     */
+    
+        const printedNewArray = filter(words)
+    /*
+        Invoke the string building function, and pass the
+        return value of the previous function as an argument
+    */
+    const sentence = joinWords(printedNewArray)
+    
+    
+    
+    console.log(sentence)
+
+
+//Practice: You Can Tune a Piano, But You Can't...
+
+const svensCatch = () => {
+    const flip = Math.random() * 3
+    if (flip <= 1) {
+        console.log("Sven hooked a tuna! :)")
+    } else {
+        console.log("Sven came up empty-handed. :(")
+    }
 }
-/*
-    Function to build a single string from the array
-    (Google 'javascript combine all items in array' to get started)
- */
-const joinWords = (array) => {
-    const sentenceArray = array.join(" ")
-    return sentenceArray
+
+svensCatch()
+
+// Practice: Fast Food (Multiple Parameters)
+const order = (sandwich, side, drink, dessert) => {
+    const meal_order = {
+        main: sandwich, 
+        side_item: side, 
+        drink_item: drink, 
+        dessert_item: dessert, 
+    }
+    return meal_order
 }
 
-/*
-    Invoke the filtering function and store its return value
- */
+console.log(order("cheeseburger", "fries", "orange soda", "apple pie"))
 
-    const printedNewArray = filter(words)
-/*
-    Invoke the string building function, and pass the
-    return value of the previous function as an argument
-*/
-joinWords(printedNewArray)
+//Practice: Deining the chores
 
 
-
-console.log(joinWords)
+const vaccum = () => {
+    {
+        firstName: 
+    }
+}
